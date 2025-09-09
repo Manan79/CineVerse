@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = st.secrets.get("TMDB_API_KEY", os.getenv("TMDB_API_KEY"))
 # Debug print
-st.write("API key loaded:", bool(API_KEY))
+# st.write("API key loaded:", bool(API_KEY))
 
 # Page configuration
 st.set_page_config(
@@ -323,7 +323,7 @@ def get_movie_recommendations(query):
         You are an intelligent movie recommendation engine.
         
         Task:
-        Given a movie title or description: "{query}", recommend exactly 5 movies.
+        Given a movie title or description: "{query}", recommend exactly 8 movies.
         
         Rules:
         1. If "{query}" belongs to a known franchise (e.g., Marvel, Harry Potter, Fast & Furious, etc.):
