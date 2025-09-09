@@ -3,9 +3,12 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-if TMDB_API_KEY:
-    print("TMDB API key loaded successfully")
+# TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+# if TMDB_API_KEY:
+#     print("TMDB API key loaded successfully")
+API_KEY = st.secrets.get("TMDB_API_KEY", os.getenv("TMDB_API_KEY"))
+# Debug print
+st.write("API key loaded:", bool(API_KEY))
 
 BASE_URL = "https://api.themoviedb.org/3"
 
