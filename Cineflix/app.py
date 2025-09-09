@@ -12,7 +12,9 @@ from movie_chatbot import chatbot
 from dotenv import load_dotenv
 
 load_dotenv()
-
+API_KEY = st.secrets.get("TMDB_API_KEY", os.getenv("TMDB_API_KEY"))
+# Debug print
+st.write("API key loaded:", bool(API_KEY))
 
 # Page configuration
 st.set_page_config(
